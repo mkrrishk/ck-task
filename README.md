@@ -55,3 +55,17 @@ Then
 - code design (you should assume this code will be maintained long time)
 - tests or whatever you think is the best way how to verify that the code works as expected
 - correctness - does the code work as expected
+
+# How to Run?
+
+To execute the tests:
+
+```
+gradlew clean test
+```
+
+To build the project:
+
+```
+gradlew clean build
+```
