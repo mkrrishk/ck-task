@@ -15,12 +15,13 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class DeliveryServiceTest {
 
-    DeliveryServiceClient deliveryServiceClient;
     OrderServiceClient orderServiceClient;
+    DeliveryServiceClient deliveryServiceClient;
 
     @BeforeAll
     void beforeAll() {
-        deliveryServiceClient = new DeliveryService(new OrderServiceMock());
+        orderServiceClient = new OrderServiceMock();
+        deliveryServiceClient = new DeliveryService(orderServiceClient);
     }
 
     @Test
